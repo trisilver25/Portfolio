@@ -16,39 +16,80 @@
     flex-direction: column;
 }
 
-.page1 {
+#page1 {
     background-color: #373F51;
     color: white;
+    position: relative;
 }
 
-.page2 {
+#page2 {
     background-color: #1B1B1E;
     color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-.page3 {
+#page3 {
     background-color: #373F51;
+    color: white;
+    position: relative;
 }
 
 
-.page1 h1 {
+#page1 h1 {
     position: absolute;
     top: 25%;
     left: 1%;
     font-size: 3em;
 }
 
+#page2 h2 {
+    font-size: 2.5em;
+    text-decoration: underline;
+}
+
 .moonHr {
-    width: 100%;
-    height: 51px;
     background-color: #58A4B0;
     border-color: #58A4B0;
+}
+
+.charHr {
+    background-color: #1B1B1E;
+    border: none;
+}
+
+.gBlueHr {
+    background-color: #5382A1;
+    border: none;
+}
+
+
+
+#page2 .moonHr {
+    width: 100%;
+    height: 51px;
+    position: absolute;
+    top: 60%;
+    transform: translate(27%, -50%) rotate(-50deg);
+}
+
+#page2 .gBlueHr {
+    width: 100%;
+    height: 51px;
+    position: absolute;
+    top: 60%;
+    transform: translate(29%, -50%) rotate(45deg);
+}
+
+#page1 .moonHr {
+    width: 100%;
+    height: 51px;
     position: absolute;
     top: 30%;
     z-index: 1;
 }
 
-.charHr {
+#page1 .charHr {
     width: 100vw;
     max-width: 100%;
     height: 76px;
@@ -62,7 +103,7 @@
     clip-path: inset(0% 0% 0% 0%);
 }
 
-.page1 p {
+#page1 p {
     position: absolute;
     top: 40%;
     left: 65%;
@@ -94,4 +135,57 @@
     position: relative;
     display: inline-block;
     padding-bottom: 3em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: block;
+    float: right;
+}
+
+
+li a {
+    display: block;
+    color: #58A4B0;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #58A4B0;
+    color: #1B1B1E;
+}
+
+.skill-container {
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-row img {
+    height: 75px;
+    width: 75px;
+    margin: 40px;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.skill-row>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
