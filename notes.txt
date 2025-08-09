@@ -1,0 +1,6 @@
+Features to add:
+
+- Responsive layout, for mobile devices.
+- Introduce Bootstrap
+- Animate the Scroll to bounce after 10 seconds gently.
+- On mouse over of a page highlight the button of the page.
