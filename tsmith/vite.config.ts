@@ -6,6 +6,7 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  // set an alias for importing packages and components on files.
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
