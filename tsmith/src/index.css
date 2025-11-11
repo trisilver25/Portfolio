@@ -128,7 +128,7 @@
   text-shadow: 0 0 10px rgb(167, 139, 250, 0.5);
 }
 
-@utility card-glow {
+@utility card-hover {
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
 }
 
