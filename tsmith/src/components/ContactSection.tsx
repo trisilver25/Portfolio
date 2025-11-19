@@ -1,6 +1,6 @@
 import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { cn } from "../lib/utils";
-import { type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import {
   Slide,
   ToastContainer,
@@ -9,9 +9,13 @@ import {
 } from "react-toastify";
 
 export const ContactSection = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   // event function to generate a toast
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+
+    setIsSubmitting(true);
 
     setTimeout(() => {
       toast(customToast, {
@@ -20,7 +24,9 @@ export const ContactSection = () => {
         transition: Slide,
         theme: "dark",
         position: "bottom-right",
+        className: "items-center",
       });
+      setIsSubmitting(false);
     }, 1500);
   };
 
@@ -153,11 +159,12 @@ export const ContactSection = () => {
 
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className={cn(
                   "cosmic-button w-full flex items-center justify-center gap-2"
                 )}
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
               </button>
             </form>
@@ -172,10 +179,12 @@ export const ContactSection = () => {
 // Function used to return a custom toast to display to the front-end
 const customToast = (toast: ToastOptions) => {
   return (
-    <div className="font-semibold">
-      <div className="flex items-center gap-1">
-        <Send size={18} /> Message <span className="text-primary">Sent.</span>
+    <div className="flex-col gap-1 w-full">
+      <div className="font-semibold">
+        Message <span className="text-primary">Sent</span>
       </div>
+      <div className="text-muted-foreground">Thank you for your message.</div>
+      <div className="text-muted-foreground">I'll get back to you soon.</div>
     </div>
   );
 };
