@@ -184,7 +184,7 @@ const customToast = (toast: ToastOptions) => {
         Message <span className="text-primary">Sent</span>
       </div>
       <div className="text-muted-foreground">Thank you for your message.</div>
-      <div className="text-muted-foreground">I'll get back to you soon.</div>
+      <div className="text-muted-foreground">I'll get back to you shortly.</div>
     </div>
   );
 };

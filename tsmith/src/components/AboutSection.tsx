@@ -29,11 +29,11 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="cv goes here"
+                href="/Tristin-Smith.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 {" "}
-                Download CV
+                View Resume
               </a>
             </div>
           </div>
