@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactElement } from "react";
+import { FaStar } from "react-icons/fa";
+import type { IconType } from "react-icons/lib";
 
 // stars are a list of objects of the below properties.
 // id, size, x, y, opacity, animationDuration
@@ -13,10 +15,10 @@ interface Star {
   animationDuration: number | any;
 }
 
-// Meteors use id, size, x, y, delay, duration
-// define the meteor interface
-interface Meteor {
+// ShootingStar
+interface ShootingStar {
   id: number;
+  icon: IconType;
   size: number;
   x: number;
   y: number;
@@ -26,11 +28,11 @@ interface Meteor {
 
 export const StarBackground = () => {
   const [stars, setStars] = useState<Star[]>([]);
-  const [meteors, setMeteors] = useState<Meteor[]>([]);
+  const [shootingStars, setShootingStars] = useState<ShootingStar[]>([]);
 
   useEffect(() => {
     generateStars();
-    generateMeteors();
+    generateShootingStars();
 
     const handleResize = () => {
       generateStars();
@@ -62,22 +64,22 @@ export const StarBackground = () => {
     setStars(newStars);
   };
 
-  const generateMeteors = () => {
-    const numberOfMeteors = 4;
-    const newMeteors = [];
+  const generateShootingStars = () => {
+    const numberOfShootingStars = 4;
+    const newShootingStars = [];
 
-    for (let i = 0; i < numberOfMeteors; i++) {
-      newMeteors.push({
+    for (let i = 0; i < numberOfShootingStars; i++) {
+      newShootingStars.push({
         id: i,
-        size: Math.random() * 2 + 1,
+        size: 20,
+        icon: FaStar,
         x: Math.random() * 100,
         y: Math.random() * 20,
         delay: Math.random() * 15,
         animationDuration: Math.random() * 3 + 3,
       });
     }
-
-    setMeteors(newMeteors);
+    setShootingStars(newShootingStars);
   };
 
   return (
@@ -97,20 +99,28 @@ export const StarBackground = () => {
         />
       ))}
 
-      {meteors.map((meteor) => (
-        <div
-          key={meteor.id}
-          className="meteor animate-meteor"
-          style={{
-            width: meteor.size * 50 + "px",
-            height: meteor.size * 2 + "px",
-            left: meteor.x + "%",
-            top: meteor.y + "%",
-            animationDelay: meteor.delay,
-            animationDuration: meteor.animationDuration,
-          }}
-        />
-      ))}
+      {shootingStars.map((shootingStar) => {
+        const IconComponent = shootingStar.icon;
+
+        return (
+          <div
+            key={shootingStar.id}
+            className="absolute animate-meteor"
+            style={{
+              left: shootingStar.x + "%",
+              top: shootingStar.y + "%",
+              animationDelay: shootingStar.delay,
+              animationDuration: shootingStar.animationDuration,
+            }}
+          >
+            <IconComponent
+              className="animate-shootingStar"
+              size={shootingStar.size}
+              color="white"
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };
