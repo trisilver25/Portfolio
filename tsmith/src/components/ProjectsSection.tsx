@@ -10,6 +10,15 @@ const projects = [
     tags: ["Angular", "Bootstrap", "JavaScript"],
     demoUrl: "https://world-map-tsmith.netlify.app/map",
   },
+  {
+    id: 2,
+    title: "Smoothie Blast",
+    description:
+      "Developed an online ordering website, that has orders, an admin dashboard. I also developed the backend using NodeJS with ExpressJS.",
+    image: "/projects/SmoothieBlast.png",
+    tags: ["React", "Bootstrap", "TypeScript", "ExpressJS", "NodeJS"],
+    demoUrl: "https://capstone-frontend-4y9n.onrender.com/",
+  },
 ];
 
 export const ProjectsSection = () => {
