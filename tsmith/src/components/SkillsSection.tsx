@@ -18,8 +18,8 @@ const skills = [
 
   // Tools
   { name: "GitHub/GitLab", level: 40, category: "tools" },
-  { name: "Postman", level: 30, category: "tools" },
-  { name: "VS Code", level: 50, category: "tools" },
+  { name: "Postman", level: 80, category: "tools" },
+  { name: "VS Code", level: 60, category: "tools" },
   { name: "Docker", level: 10, category: "tools" },
 ];
 
