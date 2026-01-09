@@ -177,7 +177,7 @@ export const ContactSection = () => {
 };
 
 // Function used to return a custom toast to display to the front-end
-const customToast = (toast: ToastOptions) => {
+const customToast = () => {
   return (
     <div className="flex-col gap-1 w-full">
       <div className="font-semibold">
