@@ -1,14 +1,13 @@
 import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { cn } from "../lib/utils";
-import { useState, type FormEvent } from "react";
-import {
-  Slide,
-  ToastContainer,
-  toast,
-  type ToastOptions,
-} from "react-toastify";
+import { useRef, useState, type FormEvent } from "react";
+import { Slide, ToastContainer, toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 export const ContactSection = () => {
+  // Figure out the reference DOM for EmailJS
+  const form = useRef<HTMLFormElement>(null);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // event function to generate a toast
@@ -16,6 +15,15 @@ export const ContactSection = () => {
     e.preventDefault();
 
     setIsSubmitting(true);
+
+    const currentForm = form.current;
+    if (currentForm === null) {
+      return;
+    }
+
+    emailjs.sendForm("contact_service", "template_uegw7zi", currentForm, {
+      publicKey: import.meta.env.VITE_API_KEY,
+    });
 
     setTimeout(() => {
       toast(customToast, {
@@ -46,7 +54,7 @@ export const ContactSection = () => {
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
-            <div className="space-y-6 justify-center">
+            <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
@@ -106,7 +114,7 @@ export const ContactSection = () => {
           <div className="bg-card p-8 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"

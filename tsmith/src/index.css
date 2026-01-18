@@ -169,8 +169,8 @@
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
-@utlity skill-hover {
-  @apply hover:border-solid hover:outline-text-primary;
+@utility skill-hover {
+  @apply hover:border-solid hover:border-primary;
 }
 
 
