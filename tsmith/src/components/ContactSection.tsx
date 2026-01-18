@@ -36,6 +36,8 @@ export const ContactSection = () => {
       });
       setIsSubmitting(false);
     }, 1500);
+
+    currentForm.reset();
   };
 
   return (
