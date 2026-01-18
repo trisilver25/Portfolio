@@ -21,10 +21,10 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            As a senior student at Western Governors University, I am developing
-            expertise across the entire software development spectrum, building
-            everything from dynamic websites and mobile applications to robust
-            back-end services.
+            As a recent graduate from WGU, I'm applying expertise across the
+            entire software development spectrum, building everything from
+            dynamic websites and mobile applications to robust back-end
+            services.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">

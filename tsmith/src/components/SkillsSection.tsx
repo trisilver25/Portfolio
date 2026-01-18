@@ -4,7 +4,7 @@ import { cn } from "../lib/utils";
 const skills = [
   // Frontend
   { name: "HTML/CSS", level: 30, category: "frontend" },
-  { name: "JavaScript", level: 30, category: "frontend" },
+  { name: "JavaScript", level: 40, category: "frontend" },
   { name: "React", level: 15, category: "frontend" },
   { name: "TypeScript", level: 30, category: "frontend" },
 
@@ -18,8 +18,8 @@ const skills = [
 
   // Tools
   { name: "GitHub/GitLab", level: 40, category: "tools" },
-  { name: "Postman", level: 30, category: "tools" },
-  { name: "VS Code", level: 50, category: "tools" },
+  { name: "Postman", level: 80, category: "tools" },
+  { name: "VS Code", level: 60, category: "tools" },
   { name: "Docker", level: 10, category: "tools" },
 ];
 
@@ -45,10 +45,10 @@ export const SkillsSection = () => {
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer border border-transparent",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-foreground hover:bd-secondary"
+                  : "bg-secondary/70 text-foreground hover:border-primary"
               )}
             >
               {category}
