@@ -35,9 +35,8 @@ export const ContactSection = () => {
         className: "items-center",
       });
       setIsSubmitting(false);
+      currentForm.reset();
     }, 1500);
-
-    currentForm.reset();
   };
 
   return (
@@ -171,7 +170,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2",
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
