@@ -21,10 +21,9 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            As a recent graduate from WGU, I'm applying expertise across the
-            entire software development spectrum, building everything from
-            dynamic websites and mobile applications to robust back-end
-            services.
+            As a recent graduate from Western Governors University with a degree
+            in Software Engineering, I am focused on further enhancing my skills
+            in web development from front-end to back-end.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
