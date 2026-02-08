@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactElement } from "react";
+import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import type { IconType } from "react-icons/lib";
 
@@ -45,7 +45,7 @@ export const StarBackground = () => {
 
   const generateStars = () => {
     const numberOfStars = Math.floor(
-      (window.innerWidth * window.innerHeight) / 10000
+      (window.innerWidth * window.innerHeight) / 10000,
     );
 
     const newStars = [];

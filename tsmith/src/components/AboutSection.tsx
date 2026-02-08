@@ -14,12 +14,14 @@ export const AboutSection = () => {
               Passionate Software Engineering Graduate
             </h3>
             <p className="text-muted-foreground">
-              With my education and background in IT I have strong problem
-              solving skills that help me tackle problem solving efficiently.
+              With my background in IT and an education in Software Engineering,
+              I possess strong problem-solving skills that enable me to tackle
+              problems diligently.
             </p>
             <p className="text-muted-foreground">
-              I'm passionate about learning all things code whether that be a
-              website, back-end app, or even a mobile app. I want to learn it!
+              I'm enthusiastic about furthering my knowledge of coding, whether
+              it be front-end, back-end, or automation testing. I'm eager to
+              learn and continue my growth.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -29,7 +31,7 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="/Tristin-Smith.pdf"
+                href="/projects/Tristin-Smith.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 {" "}
