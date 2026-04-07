@@ -16,12 +16,12 @@ export const AboutSection = () => {
             <p className="text-muted-foreground">
               With my background in IT and an education in Software Engineering,
               I possess strong problem-solving skills that enable me to tackle
-              problems diligently.
+              challenges diligently.
             </p>
             <p className="text-muted-foreground">
-              I'm enthusiastic about furthering my knowledge of coding, whether
-              it be front-end, back-end, or automation testing. I'm eager to
-              learn and continue my growth.
+              I'm excited to expand my coding expertise, including front-end,
+              back-end, QA, and automation testing, and I'm eager to keep
+              learning and growing in these areas.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -80,7 +80,7 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> IT Support </h4>
                   <p className="text-muted-foreground">
-                    Solved tickets within the required SLA, found solutiosn to
+                    Solved tickets within the required SLAs, found solutions to
                     internal technical infrastructure and implemented them
                     successfully with a plan in place.
                   </p>

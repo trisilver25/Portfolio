@@ -21,6 +21,7 @@ const skills = [
   { name: "Postman", level: 80, category: "tools" },
   { name: "VS Code", level: 60, category: "tools" },
   { name: "Docker", level: 10, category: "tools" },
+  { name: "Jira", level: 80, category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
@@ -29,7 +30,7 @@ export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
+    (skill) => activeCategory === "all" || skill.category === activeCategory,
   );
 
   return (
@@ -48,7 +49,7 @@ export const SkillsSection = () => {
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer border border-transparent",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-foreground hover:border-primary"
+                  : "bg-secondary/70 text-foreground hover:border-primary",
               )}
             >
               {category}
